@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lakshmi Pratap – UX/UI Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body>
+    <nav class="navbar">
+  <div class="logo">Lakshmi Pratap</div>
+  <ul class="nav-links">
+  <li><a href="#home" class="nav-link">Home</a></li>
+  <li><a href="#projects" class="nav-link">Projects</a></li>
+  <li><a href="about.html">About Me</a></li>
+  <li><a href="resume.pdf" target="_blank">Resume</a></li> 
+</ul>
+
+</nav>
+
+<header id="home" class="hero-with-images">
+  <!-- Left side: two images side-by-side -->
+  <div class="side-illustrations">
+    <div class="circle-image">
+      <img src="images/Peace.jpg" alt="Peace" />
+    </div>
+    <div class="circle-image">
+      <img src="images/wave.png" alt="Hello" />
+    </div>
+  </div>
+
+  <!-- Main text -->
+  <div class="hero-text">
+  <h1><span class="hi-large">Hi!</span></h1>
+  <p class="intro-line">I turn distracted users into engaged ones.</p>
+  
+  <p class="how-text">Because I know... </p>
+  <ul class="bio-bullets">
+    <li>User Experience + User Interface</li>
+    <li>Animation + Illustration</li>
+    <li>Architecture + HCI + VR + AR</li>
+    <li>B2B + B2C + SaaS</li>
+  </ul>
+  
+  <a href="#projects" class="scroll-down" id="skip-animation">↓ No time for this?</a>
+
+</div>
+
+
+  <!-- Right side: two images side-by-side -->
+  <div class="side-illustrations">
+    <div class="circle-image">
+      <img src="images/Hi.jpg" alt="Hi" />
+    </div>
+    <div class="circle-image">
+      <img src="images/Garcon.png" alt="Wave" />
+    </div>
+  </div>
+</header>
+
+
+<section id="projects" class="projects">
+  <h2>Let's move to the serious stuff,</h2>
+
+  <!-- Filter Navigation -->
+  <div class="project-filter">
+    <button class="filter-btn" data-category="app">Mobile App</button>
+    <button class="filter-btn" data-category="web">Website</button>
+    <button class="filter-btn" data-category="illustration">Illustrations</button>
+    <button class="filter-btn" data-category="sketch">Sketches</button>
+  </div>
+
+  <!-- Project Grid -->
+  <div class="projects-grid">
+
+    <!-- Mobile App Project -->
+    <div class="project-card" data-category="app">
+      <img src="images/SportsCove.jpg" alt="Sportscove App Screenshot" />
+      <div class="card-text">
+        <h3>Sportscove App</h3>
+        <p>A mobile app connecting sports learners with coaches from across the globe.</p>
+        <a href="projects/sportscove.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+
+    <!-- Website Project -->
+    <div class="project-card" data-category="web">
+      <img src="images/Dashboard.jpg" alt="UX Dashboard Design" />
+      <div class="card-text">
+        <h3>UX Dashboard</h3>
+        <p>The User Experience and Interface design for the dashboard done for the different roles at Clearisk.</p>
+        <a href="sportscove.html" class="view-btn">View Project →</a>
+      </div>
+    </div>
+  </div> <!-- Close .projects-grid -->
+
+  <!-- ✅ Sketches Section -->
+  <div class="sketch-gallery-wrapper project-card" data-category="sketch">
+    <h3 class="sketch-heading">I find the different emotions people exhibit on their faces very fascinating</h3>
+    <button class="scroll-btn left">
+      <img src="images/left-arrow.svg" alt="Scroll Left" />
+    </button>
+    <div class="sketch-gallery">
+      <img src="images/art 1.png" alt="Sketch 1" />
+      <img src="images/art 2.png" alt="Sketch 2" />
+      <img src="images/art 3.png" alt="Sketch 3" />
+      <img src="images/art 4.png" alt="Sketch 4" />
+      <img src="images/art 5.png" alt="Sketch 5" />
+      <img src="images/art 6.png" alt="Sketch 6" />
+    </div>
+    <button class="scroll-btn right">
+      <img src="images/right-arrow.svg" alt="Scroll Right" />
+    </button>
+  </div>
+
+  <!-- ✅ Illustrations Section (moved inside correctly) -->
+  <div class="illustration-gallery-wrapper project-card" data-category="illustration">
+    <h3 class="illustration-heading">I had an experimental phase with 2D illustration styles</h3>
+    <button class="scroll-btn left">
+      <img src="images/left-arrow.svg" alt="Scroll Left" />
+    </button>
+    <div class="illustration-gallery">
+      <img src="images/Illustration1.jpg" alt="Illustration 1" />
+      <img src="images/Illustration2.jpg" alt="Illustration 2" />
+      <img src="images/Illustration3.jpg" alt="Illustration 3" />
+      <img src="images/Illustration4.jpg" alt="Illustration 4" />
+      <img src="images/Illustration5.png" alt="Illustration 5" />
+      <img src="images/Illustration6.jpg" alt="Illustration 6" />
+      <img src="images/Illustration7.jpg" alt="Illustration 7" />
+      <img src="images/Illustration8.png" alt="Illustration 8" />
+    </div>
+    <button class="scroll-btn right">
+      <img src="images/right-arrow.svg" alt="Scroll Right" />
+    </button>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 Lakshmi Pratap</p>
+    <a href="mailto:lakshmipwork@gmail.com">Email</a> |
+    <a href="https://www.linkedin.com/in/lakshmi-pratap" target="_blank">LinkedIn</a>
+  </footer>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  // Filtering logic
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const category = button.getAttribute('data-category');
+
+      projectCards.forEach(card => {
+        if (category === card.getAttribute('data-category')) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // ✅ Automatically click "Mobile App" button on load
+  document.addEventListener("DOMContentLoaded", () => {
+    const defaultButton = document.querySelector('[data-category="app"]');
+    if (defaultButton) defaultButton.click();
+  });
+</script>
+
+
+
+<script>
+  const sections = document.querySelectorAll('header[id], section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function activateLink() {
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionTop = current.offsetTop - 100; // buffer
+    const sectionHeight = current.offsetHeight;
+    const sectionId = current.getAttribute('id');
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', activateLink);
+window.addEventListener('load', activateLink);
+
+</script>
+
+<script>
+  const scrollWrappers = document.querySelectorAll('.sketch-gallery-wrapper, .illustration-gallery-wrapper');
+
+scrollWrappers.forEach(wrapper => {
+  const gallery = wrapper.querySelector('.sketch-gallery, .illustration-gallery');
+  const leftBtn = wrapper.querySelector('.scroll-btn.left');
+  const rightBtn = wrapper.querySelector('.scroll-btn.right');
+
+  if (leftBtn && rightBtn && gallery) {
+    leftBtn.addEventListener('click', () => {
+      gallery.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      gallery.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  }
+});
+
+</script>
+
+<div id="bee-wrapper">
+  <div id="bee"></div>
+</div>
+
+
+<script>
+  const beeWrapper = document.getElementById('bee-wrapper');
+  const bee = document.getElementById('bee');
+  const skipButton = document.getElementById('skip-animation');
+  const homeSection = document.getElementById('home');
+
+  let animationEnabled = true;
+
+  // Handle mouse movement
+  let lastMouseX = 0;
+let currentDirection = 'right'; // Track current bee direction
+
+document.addEventListener('mousemove', (e) => {
+  if (!animationEnabled) return;
+
+  const threshold = 15; // minimum pixels before direction switch
+  const deltaX = e.clientX - lastMouseX;
+
+  if (deltaX > threshold) {
+    currentDirection = 'right';
+  } else if (deltaX < -threshold) {
+    currentDirection = 'left';
+  }
+
+  const offsetX = currentDirection === 'right' ? -150 : 150;
+  const offsetY = 100;
+  const rotation = currentDirection === 'right' ? '-10deg' : '10deg';
+
+  beeWrapper.style.transform = `translate(${e.clientX + offsetX}px, ${e.clientY + offsetY}px) rotate(${rotation})`;
+
+  lastMouseX = e.clientX;
+});
+
+
+  // Handle "No time for this?" click
+  skipButton.addEventListener('click', () => {
+    animationEnabled = false;
+    bee.style.animation = 'none'; // Stop fluttering
+    beeWrapper.style.transform = 'translate(-100px, -100px)'; // Move it off screen
+  });
+
+  // Resume animation if user scrolls back to the "home" section
+  window.addEventListener('scroll', () => {
+    const rect = homeSection.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      if (!animationEnabled) {
+        animationEnabled = true;
+        bee.style.animation = ''; // Resume fluttering
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
